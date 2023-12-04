@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --paragraph-font-size: 14px;
+    --font-weight-bold: 700;
+    --font-weight-normal: 500;
+    --paragraph-font-family: "Montserrat", sans-serif;
+    --heading-font-family: "Fraunces", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+}
+
+.card-container {
+    max-width: 1440px;
+    margin: 0 1.8rem;
+    background-color: var(--white);
+    border-radius: 8px;
+
+}
+
+.image-container {
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 290px;
+    border-radius: 9px 9px 0 0;
+}
+
+.content-container {
+    padding: 2rem;
+}
+
+.content-container small {
+    font-family: var(--paragraph-font-family);
+    font-size: var(--paragraph-font-size);
+    color: var(--dark-grayish-blue);
+    line-height: 25px;
+    margin-bottom: 1rem;
+    display: block;
+    letter-spacing: 0.4rem;
+}
+
+.content-container h1 {
+    font-family: var(--heading-font-family);
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+    line-height: 30px;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.content-container p {
+    font-family: var(--paragraph-font-family);
+    font-size: var(--paragraph-font-size);
+    color: var(--dark-graysh-blue);
+    line-height: 24px;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.content-container .prices {
+    display: flex;
+    align-items: center;
+    font-family: var(--heading-font-family);
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+    line-height: 30px;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.content-container .normal-price {
+    text-decoration: line-through;
+    color: rgb(212, 15, 15);
+    font-size: var(--paragraph-font-size);
+    font-weight: var(--font-weight-normal);
+    font-family: var(--paragraph-font-family);
+    margin-right: 1.7rem;
+}
+
+.content-container .reduced-price {
+    font-family: var(--heading-font-family);
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+
+
+.content-container button {
+    font-family: var(--paragraph-font-family);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--paragraph-font-size);
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.content-container svg {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+    }
+
+    .image-container {
+        background-image: url("./images/image-product-desktop.jpg");
+        flex: 1;
+        min-height: 500px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .content-container {
+        width: 50%;
+        padding-right: 4.9rem;
+    }
+}
